@@ -6,7 +6,7 @@ public:
         if (n < 4) return res;
         
         sort(nums.begin(), nums.end());
-
+        if((long long)nums[n-4]+nums[n-3]+nums[n-2]+nums[n-1]<target) return res;
         for (int i = 0; i < n - 3; ++i) {
             if (i > 0 && nums[i] == nums[i - 1]) continue; // skip duplicates
             for (int j = i + 1; j < n - 2; ++j) {
